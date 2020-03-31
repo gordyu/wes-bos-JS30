@@ -29,7 +29,7 @@ function handleRangeUpdate() {
 
 function handleProgress() {
   const percent = (video.currentTime / video.duration) * 100;
-  progressBar.style.flexBasis = `${percent}%`;
+  progressBar.getElementsByClassName.flexBasis = `${percent}%`;
 }
 
 function scrub(e) {
@@ -50,6 +50,6 @@ ranges.forEach(range => range.addEventListener('mousemove', handleRangeUpdate));
 
 let mousedown = false;
 progress.addEventListener('click', scrub);
-progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
+progress.addEventListener('mousemove', mousedown && scrub(e));
 progress.addEventListener('mousedown', () => mousedown = true);
 progress.addEventListener('mouseup', () => mousedown = false);
